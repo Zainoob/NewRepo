@@ -56,6 +56,7 @@ public class Clinic_Controller {
 /*	@FXML
 	TextField InvDisp= new TextField();
 */
+	//hello from zainab
 	String str1 = "a";
 	String str2 = "a";
 	String str3 = "1";
