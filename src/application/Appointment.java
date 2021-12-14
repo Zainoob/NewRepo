@@ -7,27 +7,43 @@ public class Appointment {
     int AppointmentID;//p.key
     String Time;
     String Date;
+    int AppointmentStatus;
 
-    public Appointment(AppointmentDescription description, Payment payment, Booking booking, int appointmentID, String time, String date) {
-        Description = description;
-        this.payment = payment;
-        this.booking = booking;
-        AppointmentID = appointmentID;
-        Time = time;
-        Date = date;
-    }
-    public void setAppointmentDetails(AppointmentDescription description, Payment payment, Booking booking, int appointmentID, String time, String date) {
-        Description = description;
-        this.payment = payment;
-        this.booking = booking;
-        AppointmentID = appointmentID;
-        Time = time;
-        Date = date;
-    }
-    public AppointmentDescription getDescription() {
+    
+	
+    public Appointment(AppointmentDescription description, Payment payment, Booking booking, int appointmentID,
+			String time, String date, int appointmentStatus) {
+		Description = description;
+		this.payment = payment;
+		this.booking = booking;
+		AppointmentID = appointmentID;
+		Time = time;
+		Date = date;
+		AppointmentStatus = appointmentStatus;
+	}
+	public void setAppointmentDetails(AppointmentDescription description, Payment payment, Booking booking, int appointmentID,
+			String time, String date, int appointmentStatus) {
+		Description = description;
+		this.payment = payment;
+		this.booking = booking;
+		AppointmentID = appointmentID;
+		Time = time;
+		Date = date;
+		AppointmentStatus = appointmentStatus;
+	}
+    
+
+    public int getAppointmentStatus() {
+		return AppointmentStatus;
+	}
+	public void setAppointmentStatus(int appointmentStatus) {
+		AppointmentStatus = appointmentStatus;
+	}
+	
+	public AppointmentDescription getDescription() {
         return Description;
     }
-
+    
     public void setDescription(AppointmentDescription description) {
         Description = description;
     }
