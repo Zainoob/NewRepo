@@ -35,7 +35,7 @@ public class Receptionist {
         this.receptionist = receptionist;
     }
 
-    public void setReceptionistDetails(String password, String username,String age, String name, int CNIC, String emailAddress, int contactNo)
+    public void setReceptionistDetails(String password, String username,int age, String name, int CNIC, String emailAddress, int contactNo)
     {
         Password = password;
         Username = username;

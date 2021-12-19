@@ -1,31 +1,31 @@
 package application;
 
 public class Person {
-    String Age;
+    int Age;
     String Name;
     int CNIC;//p.key
     String EmailAddress;
     int ContactNo;
 
-    public Person(String age, String name, int CNIC, String emailAddress, int contactNo) {
+    public Person(int age, String name, int CNIC, String emailAddress, int contactNo) {
         Age = age;
         Name = name;
         this.CNIC = CNIC;
         EmailAddress = emailAddress;
         ContactNo = contactNo;
     }
-    public void setPersonDetails(String age, String name, int CNIC, String emailAddress, int contactNo) {
+    public void setPersonDetails(int age, String name, int CNIC, String emailAddress, int contactNo) {
         Age = age;
         Name = name;
         this.CNIC = CNIC;
         EmailAddress = emailAddress;
         ContactNo = contactNo;
     }
-    public String getAge() {
+    public int getAge() {
         return Age;
     }
 
-    public void setAge(String age) {
+    public void setAge(int age) {
         Age = age;
     }
 

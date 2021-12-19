@@ -24,7 +24,7 @@ public class Doctor {
         this.doctor = person;
     }
 
-    public void setDoctorDetails(String designation,String age, String name, int CNIC, String emailAddress, int contactNo) {
+    public void setDoctorDetails(String designation,int age, String name, int CNIC, String emailAddress, int contactNo) {
         Designation = designation;
         this.doctor.setPersonDetails(age,name,CNIC, emailAddress,contactNo);
     }

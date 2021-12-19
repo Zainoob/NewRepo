@@ -30,9 +30,6 @@ public class Clinic_Controller {
 	
 	@FXML
 	TextArea feedback;
-	
-	@FXML
-	Button Pay;
 
 	@FXML
 	Button Submit;
@@ -62,8 +59,15 @@ public class Clinic_Controller {
 	String str3 = "1";
 	String str4 = "2";
 	
+	
+	private static Clinic clinic;
+
+	public Clinic_Controller() {
+		clinic = clinic.getInstance();
+	}
     @FXML
     private void LogIn() throws IOException {
+    	//clinic.fill();
       
     	String username = user_n.getText();
         String password = pass_w.getText();
@@ -93,44 +97,7 @@ public class Clinic_Controller {
         
     }
     
-    @FXML
-    private void Book_appointment(ActionEvent event) throws IOException {
-    	Parent CalenderView = FXMLLoader.load(getClass().getResource("Book_Appointment.fxml"));
-		Scene CalenderScene=  new Scene(CalenderView);
-		Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-		window.setScene(CalenderScene);
-		window.setTitle("");
-		window.show();
-    }
    
-    @FXML
-    private void Cancel_appointment(ActionEvent event) throws IOException {
-    	Parent CalenderView = FXMLLoader.load(getClass().getResource("Cancel_Appointment.fxml"));
-		Scene CalenderScene=  new Scene(CalenderView);
-		Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-		window.setScene(CalenderScene);
-		window.setTitle("");
-		window.show();
-    }
-    @FXML
-    private void view_appointment(ActionEvent event) throws IOException {
-    	Parent CalenderView = FXMLLoader.load(getClass().getResource("View_Appointment.fxml"));
-		Scene CalenderScene=  new Scene(CalenderView);
-		Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-		window.setScene(CalenderScene);
-		window.setTitle("");
-		window.show();
-    }
-    @FXML
-    private void Reschedule_appointment(ActionEvent event) throws IOException {
-    	Parent CalenderView = FXMLLoader.load(getClass().getResource("Reschedule_Appointment.fxml"));
-		Scene CalenderScene=  new Scene(CalenderView);
-		Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-		window.setScene(CalenderScene);
-		window.setTitle("");
-		window.show();
-    }
-
     
     @FXML
     private void  Appointmentoptions(ActionEvent event) throws IOException {
@@ -201,7 +168,7 @@ public class Clinic_Controller {
     }
     @FXML
     private void  ViewPatientProfile(ActionEvent event) throws IOException {
-    	Parent CalenderView = FXMLLoader.load(getClass().getResource("ProfileOptions.fxml"));
+    	Parent CalenderView = FXMLLoader.load(getClass().getResource("ProfileView.fxml"));
 		Scene CalenderScene=  new Scene(CalenderView);
 		Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
 		window.setScene(CalenderScene);
@@ -252,9 +219,6 @@ public class Clinic_Controller {
         }
     }
     
-
-    
-    
     @FXML
     private void Make_Payment(ActionEvent event) throws IOException {
     	Parent CalenderView = FXMLLoader.load(getClass().getResource("Make_payment.fxml"));
@@ -275,18 +239,7 @@ public class Clinic_Controller {
 		window.show();
     }
     
-    @FXML
-    private void Payment() throws IOException {
-		Stage stage = (Stage) Pay.getScene().getWindow();
- 	     
-	    stage.close();
-
-	     Scene quizScene = new Scene(FXMLLoader.load(getClass().
-	     getResource("Payment_done.fxml")));
-		 Stage primaryStage1 = new Stage();
-		 primaryStage1.setScene(quizScene);
-		 primaryStage1.show();
-    }
+    
     
 
 

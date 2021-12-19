@@ -35,7 +35,7 @@ public class Patient {
         History = history;
     }
 
-    public void setPatientDetails(String patientID, int history,String age, String name, int CNIC, String emailAddress, int contactNo)
+    public void setPatientDetails(String patientID, int history,int age, String name, int CNIC, String emailAddress, int contactNo)
     {
         PatientID = patientID;
         this.patient.setPersonDetails(age,name,CNIC, emailAddress,contactNo);
