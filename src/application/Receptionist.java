@@ -3,7 +3,7 @@ package application;
 public class Receptionist {
     String Password;
     String Username;//p.key?
-    Person receptionist;
+   /* Person receptionist;
 
     public Receptionist(String password, String username, Person receptionist) {
         Password = password;
@@ -40,5 +40,5 @@ public class Receptionist {
         Password = password;
         Username = username;
         this.receptionist.setPersonDetails(age,name,CNIC, emailAddress,contactNo);
-    }
+    }*/
 }

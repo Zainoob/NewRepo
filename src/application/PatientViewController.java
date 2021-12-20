@@ -63,9 +63,9 @@ public class PatientViewController implements Initializable{
                 new Person(3,"Rafia", 57543535, "rafia@gmail.com",3333)
             );
 
-        ObservableList<Patient> patient = FXCollections.observableArrayList(
+      /*  ObservableList<Patient> patient = FXCollections.observableArrayList(
         		new Patient("11", null, 0),new Patient("22", null, 0),new Patient("33", null, 0)
-               );
+               );*/
 
         //make sure the property value factory should be exactly same as the e.g getStudentId from your model class
         PatientIDColumn.setCellValueFactory(new PropertyValueFactory<>("Age"));
