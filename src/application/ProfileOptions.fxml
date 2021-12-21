@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="796.0" style="-fx-background-color: yellow;" stylesheets="@application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Clinic_Controller">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="796.0" style="-fx-background-color: yellow;" stylesheets="@application.css" type="AnchorPane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Clinic_Handler">
    <children>
       <ImageView fitHeight="536.0" fitWidth="796.0" layoutY="-18.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -29,34 +29,30 @@
             <Image url="@Images/1642054.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="88.0" fitWidth="86.0" layoutX="331.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView disable="true" fitHeight="88.0" fitWidth="86.0" layoutX="331.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/doctor-gastroenterologist.png" />
          </image>
       </ImageView>
-      <Button layoutX="331.0" layoutY="195.0" mnemonicParsing="false" onAction="#ViewStaffProfiles" opacity="0.0" prefHeight="84.0" prefWidth="86.0" text="Button" />
-      <Label layoutX="328.0" layoutY="293.0" prefHeight="24.0" prefWidth="110.0" text="Staff Profiles">
+      <Label disable="true" layoutX="328.0" layoutY="293.0" prefHeight="24.0" prefWidth="110.0" text="Staff Profiles">
          <font>
             <Font name="Calisto MT Bold" size="17.0" />
          </font>
       </Label>
-      <Button layoutX="328.0" layoutY="292.0" mnemonicParsing="false" onAction="#ViewStaffProfiles" opacity="0.0" prefHeight="26.0" prefWidth="104.0" text="Button" />
-      <ImageView fitHeight="90.0" fitWidth="86.0" layoutX="578.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView disable="true" fitHeight="90.0" fitWidth="86.0" layoutX="578.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/848680-200.png" />
          </image>
       </ImageView>
-      <Label layoutX="570.0" layoutY="294.0" prefHeight="22.0" prefWidth="110.0" text="Patient Profiles">
+      <Label disable="true" layoutX="570.0" layoutY="294.0" prefHeight="22.0" prefWidth="110.0" text="Patient Profiles">
          <font>
             <Font name="Calisto MT Bold" size="15.0" />
          </font>
       </Label>
-      <Button layoutX="587.0" layoutY="196.0" mnemonicParsing="false" onAction="#ViewPatientProfile" opacity="0.0" prefHeight="86.0" prefWidth="65.0" text="Button" />
-      <Button layoutX="646.0" layoutY="307.0" mnemonicParsing="false" onAction="#view_appointment" opacity="0.0" prefHeight="47.0" prefWidth="47.0" text="Button" />
-      <Button layoutX="570.0" layoutY="292.0" mnemonicParsing="false" onAction="#ViewPatientProfile" opacity="0.0" prefHeight="26.0" prefWidth="104.0" text="Button" />
-      <Button layoutX="610.0" layoutY="362.0" mnemonicParsing="false" onAction="#view_appointment" opacity="0.0" prefHeight="23.0" prefWidth="134.0" text="Button" />
       <Button fx:id="Home" layoutX="766.0" layoutY="-4.0" mnemonicParsing="false" onAction="#home" opacity="0.0" prefHeight="30.0" prefWidth="30.0" text="Button" />
-      <Button layoutX="479.0" layoutY="395.0" mnemonicParsing="false" onAction="#Reschedule_appointment" opacity="0.0" prefHeight="47.0" prefWidth="54.0" text="Button" />
-      <Button layoutX="422.0" layoutY="440.0" mnemonicParsing="false" onAction="#Reschedule_appointment" opacity="0.0" prefHeight="26.0" prefWidth="181.0" text="Button" />
+      <Button layoutX="588.0" layoutY="197.0" mnemonicParsing="false" onAction="#Give_Feedback" prefHeight="84.0" prefWidth="76.0" />
+      <Button layoutX="570.0" layoutY="292.0" mnemonicParsing="false" onAction="#Give_Feedback" prefHeight="26.0" prefWidth="101.0" />
+      <Button layoutX="331.0" layoutY="201.0" mnemonicParsing="false" onAction="#ViewStaffProfiles" prefHeight="84.0" prefWidth="86.0" />
+      <Button layoutX="328.0" layoutY="292.0" mnemonicParsing="false" onAction="#ViewStaffProfiles" prefHeight="26.0" prefWidth="102.0" />
    </children>
-</AnchorPane>
+</fx:root>

@@ -19,7 +19,6 @@ public class Patient {
 	private String email;
 	
 	public Patient(int id, int age, String name, String cnic, String email) {
-		super();
 		this.id = id;
 		this.age = age;
 		this.name = name;

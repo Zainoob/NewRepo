@@ -18,15 +18,18 @@ import javafx.scene.layout.BorderPane;
 
 public class Main extends Application
 {
-
+    static int num=11;
 	@Override
     public void start(Stage stage) throws Exception {
+		/*
 		System.out.println("HIB started");
 		SessionFactory factory = new Configuration().configure().buildSessionFactory();
 		
+		//hibernateload();
 		//creating Patient
 		Patient pat = new Patient();
-		pat.setId(1);;
+		++num;
+		pat.setId(num);
 		pat.setAge(20);
 		pat.setName("Zainab");
 		pat.setCnic("1111111111111");
@@ -40,6 +43,7 @@ public class Main extends Application
 		session.getTransaction().commit();
 		
 		session.close();
+		*/
 		
 		//System.out.println(factory);
 		//System.out.println(factory.isClosed());

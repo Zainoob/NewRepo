@@ -5,7 +5,10 @@ public class AppointmentDescription {
     String Name;
     int Fee;
 
-    public AppointmentDescription(int serviceID, String name, int fee) {
+    public AppointmentDescription() {
+	}
+
+	public AppointmentDescription(int serviceID, String name, int fee) {
         ServiceID = serviceID;
         Name = name;
         Fee = fee;
