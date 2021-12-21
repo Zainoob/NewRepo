@@ -17,7 +17,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class Clinic_Handler {
+public class Clinic_Controller {
 
 	@FXML
 	Button login;
@@ -62,7 +62,7 @@ public class Clinic_Handler {
 	
 	private static Clinic clinic;
 
-	public Clinic_Handler() {
+	public Clinic_Controller() {
 		clinic = clinic.getInstance();
 	}
     @FXML
@@ -159,7 +159,7 @@ public class Clinic_Handler {
     }
     @FXML
     private void  ViewStaffProfiles(ActionEvent event) throws IOException {
-    	Parent CalenderView = FXMLLoader.load(getClass().getResource("PatientView.fxml"));
+    	Parent CalenderView = FXMLLoader.load(getClass().getResource("ProfileOptions.fxml"));
 		Scene CalenderScene=  new Scene(CalenderView);
 		Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
 		window.setScene(CalenderScene);
@@ -167,7 +167,7 @@ public class Clinic_Handler {
 		window.show();
     }
     @FXML
-    private void  ViewPatientProfiles(ActionEvent event) throws IOException {
+    private void  ViewPatientProfile(ActionEvent event) throws IOException {
     	Parent CalenderView = FXMLLoader.load(getClass().getResource("PatientView.fxml"));
 		Scene CalenderScene=  new Scene(CalenderView);
 		Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
@@ -188,7 +188,7 @@ public class Clinic_Handler {
     @FXML
     private void Enter_Feedback(ActionEvent event) throws IOException {
     	String feedbackk=feedback.getText();
-    	clinic.updateFeedbacks(feedbackk);
+    	clinic.setFeedback(feedbackk);
     	System.out.print(feedbackk);
     }
     @FXML

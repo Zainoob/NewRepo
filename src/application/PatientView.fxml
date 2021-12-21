@@ -74,9 +74,9 @@
                                 <Insets bottom="10.0" />
                             </VBox.margin>
                         </HBox>
-                        <TableView fx:id="PatientView" focusTraversable="false" maxHeight="1.7976931348623157E308" prefHeight="528.0" prefWidth="874.0">
+                        <TableView fx:id="PersonView" focusTraversable="false" maxHeight="1.7976931348623157E308" prefHeight="528.0" prefWidth="874.0">
                             <columns>
-                                <TableColumn fx:id="IDcolumn" prefWidth="75.0" text="PatientID" />
+                                <TableColumn fx:id="PatientIDColumn" prefWidth="75.0" text="PatientID" />
                                 <TableColumn fx:id="AgeColumn" prefWidth="75.0" text="Age" />
                                 <TableColumn fx:id="NameColumn" prefWidth="75.0" text="Name" />
                                 <TableColumn fx:id="CNICColumn" prefWidth="75.0" text="CNIC" />

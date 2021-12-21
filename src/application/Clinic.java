@@ -1,6 +1,7 @@
 package application;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 import javafx.collections.ObservableList;
 
@@ -31,7 +32,6 @@ public class Clinic {
 	{
 		Feedback e=new Feedback();
 		e.setFeedback(s);
-		e.setFeedbackNum(num);
 		num++;
 		Feedbacks.add(e);
 		
@@ -117,4 +117,14 @@ public class Clinic {
 	}
 	
 
+	public void setFeedback(String str)
+	{
+			Feedback f = new Feedback();
+			f.setFeedback(str);
+			f.setDateAdded(new Date());
+			DBHandler ins = new DBHandler();
+			ins.setFeedback(f);
+			//Feedbacks.add(f);
+
+	}
 }
