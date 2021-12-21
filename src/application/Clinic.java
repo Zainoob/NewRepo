@@ -1,6 +1,7 @@
 package application;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Clinic {
     String Adress;
@@ -23,4 +24,14 @@ public class Clinic {
         return clinic;
     }
 
+	public void setFeedback(String str)
+	{
+			Feedback f = new Feedback();
+			f.setFeedback(str);
+			f.setDateAdded(new Date());
+			DBHandler ins = new DBHandler();
+			ins.setFeedback(f);
+			//Feedbacks.add(f);
+
+	}
 }

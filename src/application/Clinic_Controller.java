@@ -168,7 +168,7 @@ public class Clinic_Controller {
     }
     @FXML
     private void  ViewPatientProfile(ActionEvent event) throws IOException {
-    	Parent CalenderView = FXMLLoader.load(getClass().getResource("ProfileView.fxml"));
+    	Parent CalenderView = FXMLLoader.load(getClass().getResource("PatientView.fxml"));
 		Scene CalenderScene=  new Scene(CalenderView);
 		Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
 		window.setScene(CalenderScene);
@@ -188,6 +188,7 @@ public class Clinic_Controller {
     @FXML
     private void Enter_Feedback(ActionEvent event) throws IOException {
     	String feedbackk=feedback.getText();
+    	clinic.setFeedback(feedbackk);
     	System.out.print(feedbackk);
     }
     @FXML

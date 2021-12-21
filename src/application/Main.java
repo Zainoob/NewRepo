@@ -1,6 +1,7 @@
 package application;
 	
 import java.io.IOException;
+import java.util.Date;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -21,12 +22,12 @@ public class Main extends Application
 
 	@Override
     public void start(Stage stage) throws Exception {
-		System.out.println("HIB started");
-		SessionFactory factory = new Configuration().configure().buildSessionFactory();
+		
+		//SessionFactory factory = new Configuration().configure().buildSessionFactory();
 		
 		//creating Patient
-		Patient pat = new Patient();
-		pat.setId(1);;
+		/*Patient pat = new Patient();
+		pat.setId(2);;
 		pat.setAge(20);
 		pat.setName("Zainab");
 		pat.setCnic("1111111111111");
@@ -40,6 +41,20 @@ public class Main extends Application
 		session.getTransaction().commit();
 		
 		session.close();
+		
+		Feedback f = new Feedback();
+		f.setFeedback("musa");
+		f.setDateAdded(new Date());
+	
+		Session session = factory.openSession();
+		
+		session.beginTransaction();
+		session.save(f);
+		
+		session.getTransaction().commit();
+		
+		session.close();*/
+		
 		
 		//System.out.println(factory);
 		//System.out.println(factory.isClosed());

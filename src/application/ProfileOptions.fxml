@@ -29,7 +29,7 @@
             <Image url="@Images/1642054.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="88.0" fitWidth="86.0" layoutX="331.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView disable="true" fitHeight="88.0" fitWidth="86.0" layoutX="331.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/doctor-gastroenterologist.png" />
          </image>
@@ -41,7 +41,7 @@
          </font>
       </Label>
       <Button layoutX="328.0" layoutY="292.0" mnemonicParsing="false" onAction="#ViewStaffProfiles" opacity="0.0" prefHeight="26.0" prefWidth="104.0" text="Button" />
-      <ImageView fitHeight="90.0" fitWidth="86.0" layoutX="578.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView disable="true" fitHeight="90.0" fitWidth="86.0" layoutX="578.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/848680-200.png" />
          </image>
@@ -52,11 +52,7 @@
          </font>
       </Label>
       <Button layoutX="587.0" layoutY="196.0" mnemonicParsing="false" onAction="#ViewPatientProfile" opacity="0.0" prefHeight="86.0" prefWidth="65.0" text="Button" />
-      <Button layoutX="646.0" layoutY="307.0" mnemonicParsing="false" onAction="#view_appointment" opacity="0.0" prefHeight="47.0" prefWidth="47.0" text="Button" />
       <Button layoutX="570.0" layoutY="292.0" mnemonicParsing="false" onAction="#ViewPatientProfile" opacity="0.0" prefHeight="26.0" prefWidth="104.0" text="Button" />
-      <Button layoutX="610.0" layoutY="362.0" mnemonicParsing="false" onAction="#view_appointment" opacity="0.0" prefHeight="23.0" prefWidth="134.0" text="Button" />
       <Button fx:id="Home" layoutX="766.0" layoutY="-4.0" mnemonicParsing="false" onAction="#home" opacity="0.0" prefHeight="30.0" prefWidth="30.0" text="Button" />
-      <Button layoutX="479.0" layoutY="395.0" mnemonicParsing="false" onAction="#Reschedule_appointment" opacity="0.0" prefHeight="47.0" prefWidth="54.0" text="Button" />
-      <Button layoutX="422.0" layoutY="440.0" mnemonicParsing="false" onAction="#Reschedule_appointment" opacity="0.0" prefHeight="26.0" prefWidth="181.0" text="Button" />
    </children>
 </AnchorPane>

@@ -1,9 +1,5 @@
 package application;
 
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -21,30 +17,35 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
 public class PatientViewController implements Initializable{
 
-	@FXML
-    private TableColumn<Person, Integer> PhoneColumn;
+    @FXML
+    private TableColumn<Patient, String> CNICColumn;
 
     @FXML
-    private TableColumn<Person,String> EmailColumn;
+    private TableColumn<Patient,String> EmailColumn;
 
     @FXML
-    private TableView<Patient> PatientView;
+    private Button deleteButton;
+
+    @FXML
+    private TableView<Patient> PersonView;
+
+    @FXML
+    private Button modifyButton;
 
     @FXML
     private TableColumn<Patient, Integer> PatientIDColumn;
 
     @FXML
-    private TableColumn<Person,String> NameColumn;
+    private TableColumn<Patient,String> NameColumn;
 
     @FXML
-    private TableColumn<Person, String> AgeColumn;
-    @FXML
-    private Button deleteButton;
-
-    @FXML
-    private Button modifyButton;
+    private TableColumn<Patient, Integer> AgeColumn;
 
     @FXML
     private Button searchButton;
@@ -57,24 +58,32 @@ public class PatientViewController implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        ObservableList<Person> person = FXCollections.observableArrayList(
-        new Person(1,"Moosa", 12345678,"moosa@gmail.com", 900),
-                new Person(2,"Zainab", 45565556, "zainab@gmail.com",988),
-                new Person(3,"Rafia", 57543535, "rafia@gmail.com",3333)
+        ObservableList<Patient> person = FXCollections.observableArrayList(
+        new Patient(12,20,"Moosa", "12345678","moosa@gmail.com"),
+                new Patient(22,21,"Zainab", "45565556", "zainab@gmail.com"),
+                new Patient(33,60,"Rafia", "57543535", "rafia@gmail.com")
             );
 
-      /*  ObservableList<Patient> patient = FXCollections.observableArrayList(
-        		new Patient("11", null, 0),new Patient("22", null, 0),new Patient("33", null, 0)
-               );*/
+        //int id, int age, String name, String cnic, String email
 
         //make sure the property value factory should be exactly same as the e.g getStudentId from your model class
-        PatientIDColumn.setCellValueFactory(new PropertyValueFactory<>("Age"));
-        NameColumn.setCellValueFactory(new PropertyValueFactory<>("Name"));
-        AgeColumn.setCellValueFactory(new PropertyValueFactory<>("CNIC"));
-        PhoneColumn.setCellValueFactory(new PropertyValueFactory<>("EmailAddress"));
-        EmailColumn.setCellValueFactory(new PropertyValueFactory<>("ContactNo"));
+        PatientIDColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
+        AgeColumn.setCellValueFactory(new PropertyValueFactory<>("age"));
+        NameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        CNICColumn.setCellValueFactory(new PropertyValueFactory<>("cnic"));
+        EmailColumn.setCellValueFactory(new PropertyValueFactory<>("email"));
         //add your data to the table here.
-        //PatientView.setItems(person);
+        PersonView.setItems(person);
+    }
+
+    @FXML
+    private void home(ActionEvent event) throws IOException {
+    	Parent HomeView = FXMLLoader.load(getClass().getResource("Main_Menu.fxml"));
+		Scene HomeScene=  new Scene(HomeView);
+		Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+		window.setScene(HomeScene);
+		window.setTitle("Main Menu");
+		window.show();
     }
     
     @FXML
@@ -89,17 +98,5 @@ public class PatientViewController implements Initializable{
 
     @FXML
     void handleSearchButton(ActionEvent event) {
-
     }
-
-    @FXML
-    private void home(ActionEvent event) throws IOException {
-    	Parent HomeView = FXMLLoader.load(getClass().getResource("Main_Menu.fxml"));
-		Scene HomeScene=  new Scene(HomeView);
-		Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-		window.setScene(HomeScene);
-		window.setTitle("Main Menu");
-		window.show();
-    }
-
 }
