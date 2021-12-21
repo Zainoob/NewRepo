@@ -2,6 +2,10 @@ package application;
 	
 import java.io.IOException;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
@@ -17,6 +21,29 @@ public class Main extends Application
 
 	@Override
     public void start(Stage stage) throws Exception {
+		System.out.println("HIB started");
+		SessionFactory factory = new Configuration().configure().buildSessionFactory();
+		
+		//creating Patient
+		Patient pat = new Patient();
+		pat.setId(1);;
+		pat.setAge(20);
+		pat.setName("Zainab");
+		pat.setCnic("1111111111111");
+		pat.setEmail("zainoob@yahoo.com");
+		System.out.println(pat);
+		
+		Session session = factory.openSession();
+		
+		session.beginTransaction();
+		session.save(pat);
+		session.getTransaction().commit();
+		
+		session.close();
+		
+		//System.out.println(factory);
+		//System.out.println(factory.isClosed());
+		
         Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
         
         Scene scene = new Scene(root);

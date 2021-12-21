@@ -1,44 +1,72 @@
 package application;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+
 public class Patient {
-    String PatientID;//p.key
-    Person patient;
-    int History;//if patient is present in clinic records
+	
+	@Id
+	private int id;
+	
+	private int age;
+	
+	private String name;
+	
+	private String cnic;
+	
+	private String email;
+	
+	public Patient(int id, int age, String name, String cnic, String email) {
+		super();
+		this.id = id;
+		this.age = age;
+		this.name = name;
+		this.cnic = cnic;
+		this.email = email;
+	}
+	public Patient() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getCnic() {
+		return cnic;
+	}
+	public void setCnic(String cnic) {
+		this.cnic = cnic;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return this.id+" : "+this.name+" : "+this.age+" : "+this.cnic+" : "+this.email;
+	}
+	
+	
 
-    public Patient(String patientID, Person patient, int history) {
-        PatientID = patientID;
-        this.patient = patient;
-        History = history;
-    }
-
-    public String getPatientID() {
-        return PatientID;
-    }
-
-    public void setPatientID(String patientID) {
-        PatientID = patientID;
-    }
-
-    public Person getPatient() {
-        return patient;
-    }
-
-    public void setPatient(Person patient) {
-        this.patient = patient;
-    }
-
-    public int getHistory() {
-        return History;
-    }
-
-    public void setHistory(int history) {
-        History = history;
-    }
-
-    public void setPatientDetails(String patientID, int history,int age, String name, int CNIC, String emailAddress, int contactNo)
-    {
-        PatientID = patientID;
-        this.patient.setPersonDetails(age,name,CNIC, emailAddress,contactNo);
-        History = history;
-    }
+   
 }

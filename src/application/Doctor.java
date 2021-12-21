@@ -2,9 +2,9 @@ package application;
 
 public class Doctor {
     String Designation;
-    Person doctor;
+    //Person doctor;
 
-    public Doctor(String designation, Person person) {
+    /*public Doctor(String designation, Person person) {
        Designation = designation;
         this.doctor = person;
     }
@@ -27,5 +27,5 @@ public class Doctor {
     public void setDoctorDetails(String designation,int age, String name, int CNIC, String emailAddress, int contactNo) {
         Designation = designation;
         this.doctor.setPersonDetails(age,name,CNIC, emailAddress,contactNo);
-    }
+    }*/
 }
